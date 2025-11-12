@@ -1,0 +1,28 @@
+<template>
+  <lightning-card title="Record Form Demo - readonly the Record">
+    <lightning-record-form columns="2" fields={fieldList} object-api-name={objectApiName} mode="readonly"
+      record-id={recordId}></lightning-record-form>
+    <!--  fields={fields}-->
+  </lightning-card>
+  <!-- by default it is view only mode -->
+  <lightning-card title="Record Form Demo - View the Record">
+    <lightning-record-form columns="2" fields={fieldList} object-api-name={objectApiName}
+      record-id={recordId}></lightning-record-form>
+    <!--  fields={fields}-->
+  </lightning-card>
+
+  <lightning-card title="Record Form Demo - edit the Record">
+    <lightning-record-form columns="2" fields={fieldList} object-api-name={objectApiName} mode="edit"
+      onsuccess={showToast} record-id={recordId}></lightning-record-form>
+    <!--  fields={fields}-->
+  </lightning-card>
+
+  <lightning-card title="Record Form Demo - Create the Record">
+    <lightning-record-form columns="2" fields={fieldList} object-api-name={objectApiName}
+      onsuccess={navigationToRecordPage}></lightning-record-form>
+
+
+    <!-- if you are not using record id then form is open in create mode -->
+    <!--  fields={fields}-->
+  </lightning-card>
+</template>

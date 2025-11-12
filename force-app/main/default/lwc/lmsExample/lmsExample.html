@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="LWC Example" icon-name="custom:custom63">
+        <div class="slds-p-around_small">
+            <lightning-button label="Send to VF" onclick={sendMessage} variant="brand">
+            </lightning-button>
+        </div>
+
+        <template if:true={receivedMessage}>
+            <div class="slds-m-around_medium">
+                <p><strong>Received Message:</strong> {receivedMessage}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

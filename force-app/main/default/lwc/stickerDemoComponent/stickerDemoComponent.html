@@ -1,0 +1,82 @@
+<template>
+    <lightning-card title="Upload Sticker" icon-name="utility:attach">
+        <div class="slds-p-around_medium">
+
+            <!-- Sticker Name + Global toggle -->
+            <div class="slds-grid slds-gutters slds-align_absolute-center slds-m-bottom_medium">
+                <div class="slds-col slds-size_2-of-3">
+                    <lightning-input label="Name" value={stickerName} onchange={handleNameChange}
+                        placeholder="Enter name" required>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-3 slds-m-top_large">
+                    <div class={globalToggleClass} onclick={toggleGlobalSticker}>
+                        <span>Global</span>
+                        <lightning-icon icon-name="utility:check" size="x-small" class="check-icon"></lightning-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom File Upload -->
+            <div class="upload-box" onclick={triggerFileDialog} style="display:flex;
+                        align-items:center;
+                        justify-content:space-between;
+                        border:1px solid #d8dde6;
+                        border-radius:4px;
+                        padding:8px 10px;
+                        background:#fff;
+                        cursor:pointer;
+                        margin-top:0.5rem;
+                        width:675px;">
+                <span>{displayedFileName}</span>
+                <button type="button" class="browse-btn" onclick={triggerFileDialog1}>
+                    Browse File
+                </button>
+                <input type="file" accept="image/*" class="hidden-input" onchange={handleFileChange} />
+            </div>
+
+
+
+
+            <!-- Buttons -->
+            <!-- Buttons -->
+            <div class="button-row">
+                <button class="cancel-btn" onclick={resetForm}>Cancel</button>
+                <button class="upload-btn" onclick={handleSave} disabled={disableSaveButton}>Upload</button>
+            </div>
+            <!-- Compression info -->
+            <template if:true={showCompressionInfo}>
+                <div class="slds-box slds-theme_info slds-m-vertical_small">
+                    <lightning-icon icon-name="utility:info" size="x-small"></lightning-icon>
+                    <span class="slds-text-body_small">{compressionRatio}</span>
+                </div>
+            </template>
+
+            <!-- Image preview -->
+            <template if:true={fileData}>
+                <div class="preview-container slds-align_absolute-center slds-m-vertical_small">
+                    <img src={fileData.previewUrl} alt="Sticker Preview" class="preview-image" />
+                </div>
+            </template>
+
+
+            <!-- Success / Error modals -->
+            <template if:true={showSuccessCheck}>
+                <div class="success-check">
+                    <div class="success-content">
+                        <lightning-icon icon-name="utility:success" size="large" class="success-icon"></lightning-icon>
+                        <p class="success-text">Sticker uploaded successfully!</p>
+                    </div>
+                </div>
+            </template>
+            <template if:true={showErrorMessage}>
+                <div class="error-check">
+                    <div class="error-content">
+                        <lightning-icon icon-name="utility:error" size="large" class="error-icon"></lightning-icon>
+                        <p class="error-text">{errorMessage}</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

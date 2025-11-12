@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Record Edit Form-Edit Mode">
+        <lightning-record-edit-form record-id={recordID} object-api-name={objectApiName} onsuccess={handleSuccess}
+            onerror={errorHandler} onsubmit={submitHandler}>
+            <lightning-messages></lightning-messages>
+
+            <div class="slds-var-p-around_small">
+                <lightning-input-field field-name={fields.name}></lightning-input-field>
+                <lightning-input-field field-name={fields.industry}></lightning-input-field>
+            </div>
+            <div>
+                <lightning-button variant="brand" label="Create Account" type="submit"></lightning-button>
+
+                <lightning-button variant="brand" label="Reset Button" class="slds-var-p-around_small"
+                    onclick={resetForm}></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

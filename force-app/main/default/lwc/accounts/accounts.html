@@ -1,0 +1,37 @@
+<template>
+    <div class="slds-var-m-around_medium">
+    <a href="javascript:void(0);" onclick={handleClick}>Click here</a>
+    <lightning-input type="text" name="FirstName" label ="first name" required="true" placeholder="first name" onchange={handlerChange}></lightning-input>
+    <lightning-input type="text" name="lastName" label ="Last name" required="true" placeholder="last name" onchange={handlerChange}></lightning-input>
+    <lightning-input type="email" name="email" label ="email" required="true" placeholder="email address" onchange={handlerChange}></lightning-input>
+    <lightning-input type="number"  name="No_of_Employee" label ="No of employess" required="true" onchange={handlerChange}></lightning-input>
+    <lightning-input type="date"  name="Due_date" label ="due date" required="true" onchange={handlerChange}></lightning-input>
+    <lightning-input type="checkbox" name="Completd__c" label ="completed ?" checked="true" required="true" onchange={handlerChange}></lightning-input>
+
+   <!-- <lightning-input-address
+        address-label="Address"
+        street-label="Street"
+        city-label="City"
+        country-label="Country"
+        province-label="Province"s
+        postal-code-label="PostalCode"
+        street="121 Spear St."
+        city="San Francisco"
+        country="US"
+        province="CA"
+        postal-code="94105"
+        required
+        field-level-help="Help Text for inputAddress field" ></lightning-input-address>
+        -->
+
+      <lightning-combobox
+        name="progress"
+        label="Status"
+        value={value}
+        placeholder="Select Progress"
+        options={options}
+        onchange ={handleChange}>
+      </lightning-combobox>
+        <lightning-button variant="brand" label="Create Account" onclick={handleclickAccount}></lightning-button>
+        </div>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  title="Hello">
+        <div class="slds-m-left_x-small">
+        <p>{localName}</p>
+        <p>{apiname}</p>
+        </div>
+    <div class="slds-m-left_x-small">
+<lightning-button 
+variant="brand" 
+label="Change text"
+ title="Click the button and change the text" 
+ icon-name="standard:announcement" 
+ class="slds-m-left_x-small"
+ onclick={handleClick}>
+</lightning-button>
+</div>
+</lightning-card>
+</template>

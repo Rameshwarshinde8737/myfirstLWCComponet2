@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Message channel for VF to LWC communication</description>
+    <isExposed>true</isExposed>
+    <masterLabel>VFToLWCChannel</masterLabel>
+    <lightningMessageFields>
+        <fieldName>messageText</fieldName>
+        <description>Text message from VF</description>
+    </lightningMessageFields>
+
+</MessageChannel>

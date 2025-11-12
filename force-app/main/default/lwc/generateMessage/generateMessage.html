@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Generate Full Name --LWC">
+        <div class="slds-var-p-around_small">
+            <lightning-input label="First Name" onchange={handleFirstNameChange}></lightning-input>
+            <lightning-input label="Last Name" onchange={handleFirstNameChange}></lightning-input>
+        </div>
+        <div class="slds-var-p-around_small">
+            <lightning-button brand="button" label="Generate Full Name" title="Generate Full Name"
+                onclick={handleClick}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Dynamic CSS" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <p class={pColor}>this is my first componet using Dynamic CSS</p>
+        </div>    
+
+        <div class="slds-var-p-around_small">
+            <lightning-button 
+            variant="Success "   
+            label="Add CSS" 
+            class="slds-var-p-around_small" 
+            onclick={AddCsshandleClick}>
+        </lightning-button>
+
+         <lightning-button 
+            variant="Success "   
+            label="remove CSS" 
+            class="slds-var-p-around_small" 
+            onclick={removeCsshandleClick}>
+        </lightning-button>
+
+         <lightning-button 
+            variant="Success " 
+            label="Toggle CSS" 
+            class="slds-var-p-around_small" 
+            onclick={toggleCsshandleClick}>
+        </lightning-button>
+        </div>
+    </lightning-card>
+</template>

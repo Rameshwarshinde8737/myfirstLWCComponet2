@@ -1,0 +1,12 @@
+<aura:component>
+    <aura:attribute name="student" type="Map"
+        default='{name:"Priya", age:21, course:"Pharma"}' />
+
+    <p><b>Student Details</b></p>
+    <p>Name: {!v.student.name}</p>
+    <p>Age: {!v.student.age}</p>
+    <p>Course: {!v.student.course}</p>
+
+    <lightning:input label="Change Name" value="{!v.student.name}" />
+    <lightning:button label="Show Greeting" onclick="{!c.greet}" />
+</aura:component>

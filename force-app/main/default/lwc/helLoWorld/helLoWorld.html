@@ -1,0 +1,14 @@
+<template>
+    {message}
+
+
+    <h2>Fruit List:</h2>
+    <ul>
+        <template for:each={fruits} for:item="fruit">
+            <li key={fruit}>{fruit}</li>
+        </template>
+    </ul>
+
+
+
+</template>
