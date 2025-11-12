@@ -1,4 +1,3 @@
-js --
 import { LightningElement, api, track } from 'lwc';
 //import createStickerBridge from '@salesforce/apex/RealTimeController.createStickerBridge';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
