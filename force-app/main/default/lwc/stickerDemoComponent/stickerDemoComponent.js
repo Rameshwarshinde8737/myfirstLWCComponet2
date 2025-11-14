@@ -61,6 +61,7 @@ export default class StickerDemoComponent extends LightningElement {
         const input = this.template.querySelector('input[type="file"]');
         if (input) input.click();
     }
+   
  
     // ✅ NEW: handle Browse button click separately to prevent double trigger
     handleBrowseClick(event) {
